@@ -12,15 +12,18 @@ function CustomersList() {
         setNewSelectedCustomer(customer);
     }
 
+    // eslint-disable-next-line array-callback-return
     const tabRows = customers.map((customer, index) => {
-        <tr onClick={(event) => onCustomerSelect(event, customer)}
-            key={index}>
-            <td>{customer.id}</td>
-            <td>{customer.firstName}</td>
-            <td>{customer.lastName}</td>
-            <td>{customer.email}</td>
-        </tr>
-    })
+        return (
+            <tr onClick={(event) => onCustomerSelect(event, customer)}
+                key={index}>
+                <td>{customer.id}</td>
+                <td>{customer.firstName}</td>
+                <td>{customer.lastName}</td>
+                <td>{customer.email}</td>
+            </tr>
+        )
+    });
 
     const addNewCustomer = (newCustomer) => {
         const totalCustomers = customers.length;

@@ -3,13 +3,14 @@ function CustomerDetails(props) {
 
     return (
         <div className="container">
-            <h>Customer Details</h>
+            <h1>Customer Details</h1>
             <hr />
             <p>Id: {customerData.id}</p>
-            <p>First Name: {customerData.name}</p>
-            <p>Account Type: {customerData.accountType}</p>
+            <p>First Name: {customerData.firstName}</p>
+            <p>Last Name: {customerData.lastName}</p>
+            {/* <p>Account Type: {customerData.accountType}</p> */}
             <p>Email: {customerData.email}</p>
-            <p>Contact: {customerData.phone}</p>
+            {/* <p>Contact: {customerData.phone}</p> */}
         </div>
     )
 }

@@ -111,6 +111,9 @@ function CustomerForm(props) {
                         fullWidth
                         onChange={(event) => handleChange(event)}
                     />
+                    {errors.firstName && <div className='alert alert-danger'>
+                        {errors.firstName}
+                    </div>}
                 </div>
 
                 <div className='form-group'>
@@ -124,6 +127,9 @@ function CustomerForm(props) {
                         fullWidth
                         onChange={(event) => handleChange(event)}
                     />
+                    {errors.lastName && <div className='alert alert-danger'>
+                        {errors.lastName}
+                    </div>}
                 </div>
 
                 <div className='form-group'>
@@ -137,18 +143,21 @@ function CustomerForm(props) {
                         fullWidth
                         onChange={(event) => handleChange(event)}
                     />
+                    {errors.email && <div className='alert alert-danger'>
+                        {errors.email}
+                    </div>}
                 </div>
 
-                <button
+                <Button
                     type='submit'
                     startIcon={<Save />}
                     variant='contained'
-                    color='secondary'
+                    color='primary'
                     style={{
                         fontSize: 20
                     }}>
                     Submit
-                </button>
+                </Button>
             </form>
         </div>
     )
